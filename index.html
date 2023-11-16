@@ -9,12 +9,70 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyR5EqVvXdOT2EmMkubI4t6p5z5tZlRJQ"
         crossorigin="anonymous">
     <style>
-        /* Agrega estilos personalizados aquí si es necesario */
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Color de fondo */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Estilos de la barra de navegación */
+        .navbar {
+            background-color: #007bff; /* Color de fondo de la barra de navegación */
+            padding: 15px;
+        }
+
+        .navbar-brand {
+            color: #fff; /* Color del texto del logo o nombre de la página */
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff; /* Color del texto de los enlaces de navegación */
+        }
+
+        /* Estilos de la sección hero */
+        .hero {
+            background-color: #343a40; /* Color de fondo de la sección hero */
+            color: #fff; /* Color del texto en la sección hero */
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        /* Estilos de los botones */
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        /* Estilos de las secciones */
+        section {
+            padding: 80px 0;
+        }
+
+        /* Estilos del pie de página */
+        footer {
+            background-color: #343a40; /* Color de fondo del pie de página */
+            color: #fff; /* Color del texto en el pie de página */
+            text-align: center;
+            padding: 20px 0;
+        }
     </style>
 </head>
 
 <body>
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Prediction of Hypertension</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -45,67 +103,64 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1 class="text-center mt-5">Bienvenido a Prediction of Hypertension</h1>
-            <p class="text-center lead">Realiza nuestro cuestionario para prever el riesgo de hipertensión</p>
+            <p class="text-center lead">Realiza nuestro cuestionario para predecir el riesgo de hipertensión</p>
             <a href="#questionnaire" class="btn btn-primary btn-lg mt-3">Comenzar Cuestionario</a>
         </div>
     </section>
 
+    <!-- Questionnaire Section -->
     <section id="questionnaire" class="py-5">
         <div class="container">
             <h2 class="text-center mb-4">Cuestionario</h2>
-            <!-- Aquí puedes agregar el formulario con preguntas de predicción para hipertensión -->
+            <form id="questionnaire-form">
+                <div class="form-group">
+                    <label for="sexo">Sexo:</label>
+                    <select class="form-control" id="sexo" name="sexo">
+                        <option value="1">Femenino</option>
+                        <option value="0">Masculino</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" class="form-control" id="edad" name="edad" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="presion">Presión arterial:</label>
+                    <input type="number" class="form-control" id="presion" name="presion" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hepatica">Insuficiencia hepática:</label>
+                    <select class="form-control" id="hepatica" name="hepatica">
+                        <option value="1">Sí</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="diabetes">Diabetes:</label>
+                    <select class="form-control" id="diabetes" name="diabetes">
+                        <option value="1">Sí</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
         </div>
     </section>
 
-    <section id="levels" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Niveles de Presión Arterial</h2>
-            <!-- Agrega descripción de los niveles normales de presión arterial y explicación de resultados obtenidos -->
-        </div>
-    </section>
-
-    <section id="education" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Información Educativa</h2>
-            <!-- Secciones breves sobre la hipertensión -->
-        </div>
-    </section>
-
-    <section id="portfolio" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Portafolio</h2>
-            <!-- Contenido del portafolio -->
-        </div>
-    </section>
-
-    <section id="blog" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Blog</h2>
-            <!-- Contenido del blog -->
-        </div>
-    </section>
-
-    <section id="about" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Acerca de Nosotros</h2>
-            <!-- Información sobre tu equipo o empresa -->
-        </div>
-    </section>
-
-    <!-- Bootstrap JS y Popper.js (Necesarios para los componentes de Bootstrap) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iUqFZjMyshCFFw9NA1meYX6P1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyR5EqVvXdOT2EmMkubI4t6p5z5tZlRJQ"
-        crossorigin="anonymous"></script>
-
-</body>
-
-</html>
+    <!-- Levels Section -->
+<section id="levels" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Niveles de Presión Arterial</h2>
+        <p class="text-center">Los niveles normales de presión arterial son generalmente alrededor de 120/80 mm/Hg. Estos
+            valores representan la presión sistólica sobre la presión diastólica.</p>
+        <!-- Agrega más información o explicación según sea necesario -->
+    </div>
