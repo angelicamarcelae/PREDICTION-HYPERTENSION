@@ -1,39 +1,167 @@
-<!-- Questionnaire Section -->
-<section id="questionnaire" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Realiza nuestro cuestionario para predecir la hipertensión</h2>
-        <form id="questionnaire-form">
-            <div class="form-group">
-                <label for="sexo">Sexo:</label>
-                <select class="form-control" id="sexo" name="sexo">
-                    <option value="1">Femenino</option>
-                    <option value="0">Masculino</option>
-                </select>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
 
-            <div class="form-group">
-                <label for="edad">Edad:</label>
-                <input type="number" class="form-control" id="edad" name="edad" required>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Prediction of Hypertension</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyR5EqVvXdOT2EmMkubI4t6p5z5tZlRJQ"
+        crossorigin="anonymous">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Color de fondo */
+        }
 
-            <div class="form-group">
-                <label for="presion">Presión arterial:</label>
-                <input type="text" class="form-control" id="presion" name="presion" placeholder="Escribe el valor"
-                    required>
-            </div>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-            <div class="form-group">
-                <label for="hepatica">Insuficiencia hepática:</label>
-                <input type="number" class="form-control" id="hepatica" name="hepatica" required>
-            </div>
+        /* Estilos de la barra de navegación */
+        .navbar {
+            background-color: #007bff; /* Color de fondo de la barra de navegación */
+            padding: 15px;
+        }
 
-            <div class="form-group">
-                <label for="diabetes">Diabetes:</label>
-                <input type="number" class="form-control" id="diabetes" name="diabetes" required>
-            </div>
+        .navbar-brand {
+            color: #fff; /* Color del texto del logo o nombre de la página */
+        }
 
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-    </div>
-</section>
+        .navbar-nav .nav-link {
+            color: #fff; /* Color del texto de los enlaces de navegación */
+        }
+
+        /* Estilos de la sección hero */
+        .hero {
+            background-color: #343a40; /* Color de fondo de la sección hero */
+            color: #fff; /* Color del texto en la sección hero */
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        /* Estilos de los botones */
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        /* Estilos de las secciones */
+        section {
+            padding: 80px 0;
+        }
+
+        /* Estilos del pie de página */
+        footer {
+            background-color: #343a40; /* Color de fondo del pie de página */
+            color: #fff; /* Color del texto en el pie de página */
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Prediction of Hypertension</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#questionnaire">Cuestionario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#levels">Niveles de Presión Arterial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Información Educativa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portafolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Acerca de Nosotros</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="text-center mt-5">Bienvenido a Prediction of Hypertension</h1>
+            <p class="text-center lead">Realiza nuestro cuestionario para predecir la hipertensión</p>
+            <a href="#questionnaire" class="btn btn-primary btn-lg mt-3">Comenzar Cuestionario</a>
+        </div>
+    </section>
+
+    <!-- Questionnaire Section -->
+    <section id="questionnaire" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Realiza nuestro cuestionario para predecir la hipertensión</h2>
+            <form id="questionnaire-form">
+                <div class="form-group">
+                    <label for="sexo">Sexo:</label>
+                    <select class="form-control" id="sexo" name="sexo">
+                        <option value="1">Femenino</option>
+                        <option value="0">Masculino</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" class="form-control" id="edad" name="edad" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="presion">Presión arterial:</label>
+                    <input type="text" class="form-control" id="presion" name="presion" placeholder="Escribe el valor"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hepatica">Insuficiencia hepática:</label>
+                    <input type="number" class="form-control" id="hepatica" name="hepatica" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="diabetes">Diabetes:</label>
+                    <input type="number" class="form-control" id="diabetes" name="diabetes" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Levels Section -->
+    <section id="levels" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Niveles de Presión Arterial</h2>
+            <p class="text-center">Los niveles normales de presión arterial son generalmente alrededor de 120/80 mm/Hg. Estos
+                valores representan la presión sistólica (la primera cifra) sobre la presión diastólica (la segunda cifra).</p>
+            <p class="text-center">Mantener una presión arterial dentro de estos rangos es crucial para la salud cardiovascular
+                y general.</p>
+            <!-- Puedes agregar más información o explicaciones según sea necesario -->
+        </div>
+
+               
+
 
